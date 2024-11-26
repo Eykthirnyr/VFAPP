@@ -4,8 +4,6 @@
 
 A versatile video filtering application built with Python and Tkinter, designed to help users filter video files based on various criteria such as codec, resolution, duration, and file size. This tool is perfect for quickly narrowing down video files in a directory according to specific needs.
 
----
-
 ## Features
 
 - **Filter by Codec**:
@@ -30,7 +28,6 @@ A versatile video filtering application built with Python and Tkinter, designed 
 - **Output Results**:
   - Results are saved to a text file (`output.txt`) for easy reference.
 
----
 
 ## Installation
 
@@ -79,7 +76,6 @@ A versatile video filtering application built with Python and Tkinter, designed 
 - Filtered results are saved to `output.txt` in the same directory as the script.
 - A completion message will indicate how many videos matched the criteria.
 
----
 
 ## Supported Codecs
 
@@ -125,7 +121,6 @@ A versatile video filtering application built with Python and Tkinter, designed 
 - `wmv1`
 - `wmv2`
 
----
 
 ## Development
 
@@ -135,13 +130,11 @@ A versatile video filtering application built with Python and Tkinter, designed 
 - `tkinter`: GUI framework.
 - `zipfile` & `urllib`: For downloading and extracting FFmpeg.
 
----
 
 ## Screenshots
 
 ![VFAPP](https://github.com/user-attachments/assets/f2a55cfd-e703-41ea-aadd-fbc4c5024ef4)
 
----
 
 ## Author
 
