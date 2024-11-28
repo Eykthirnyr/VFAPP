@@ -2,10 +2,13 @@
 
 # Video Filter App
 
-A versatile video filtering application built with Python and Tkinter, designed to help users filter video files based on various criteria such as codec, resolution, duration, and file size. This tool is perfect for quickly narrowing down video files in a directory according to specific needs.
+A versatile video filtering application built with Python and Tkinter, designed to help users filter video files based on various criteria such as codec, resolution, duration, file size, and bitrate. This tool is perfect for quickly narrowing down video files in a directory according to specific needs.
+
+---
 
 ## Features
 
+### **Filtering Options**
 - **Filter by Codec**:
   - Supports a wide range of codecs, including HAP (HAP, HAP-Q), ProRes, H.264, HEVC, VP9, AV1, and many more.
   
@@ -18,16 +21,52 @@ A versatile video filtering application built with Python and Tkinter, designed 
 - **Filter by File Size**:
   - Specify a range for file size (in MB) to include only videos within a desired size range.
 
-- **Multi-Criteria Filtering**:
-  - Combine any or all criteria (codec, resolution, duration, and file size) for precise filtering.
+- **Filter by Bitrate** (New!):
+  - Specify a range for average bitrate (in kbps).
+  - Filter videos based on bitrate mode (Variable or Constant).
 
+- **Multi-Criteria Filtering**:
+  - Combine any or all criteria (codec, resolution, duration, file size, and bitrate) for precise filtering.
+
+---
+
+### **User Interface Enhancements**
 - **User-Friendly Interface**:
   - Intuitive GUI built with Tkinter.
   - Progress bar to track filtering progress.
 
-- **Output Results**:
-  - Results are saved to a text file (`output.txt`) for easy reference.
+- **Detailed Tooltips** (New!):
+  - Tooltips on main filters explain their purpose and usage.
+  - Tooltips on results table columns indicate sorting options.
 
+---
+
+### **Results Management**
+- **View Filtered Results**:
+  - Display filtered results in a sortable table directly within the app.
+  - Columns include:
+    - File Name
+    - File Size (in MB)
+    - Format
+    - Codec
+    - Bitrate (in kbps)
+    - Bitrate Mode (Variable or Constant)
+
+- **Sortable Columns** (New!):
+  - Click any column header to sort results:
+    - Alphabetical sorting for text-based columns (e.g., Name, Codec, Bitrate Mode).
+    - Numerical sorting for numeric columns (e.g., Size, Bitrate).
+  - Sorting toggles between ascending and descending order.
+
+- **File Management Options**:
+  - Open a video file or its containing folder.
+  - Copy video files to a new location.
+  - Delete files (with confirmation prompt).
+
+- **Export to CSV** (New!):
+  - Export filtered results as a CSV file, including all displayed columns for easy data analysis.
+
+---
 
 ## Installation
 
@@ -40,6 +79,7 @@ A versatile video filtering application built with Python and Tkinter, designed 
   - `urllib`
   - `zipfile`
   - `webbrowser`
+  - `csv`
 
 ---
 
@@ -59,6 +99,7 @@ A versatile video filtering application built with Python and Tkinter, designed 
 - **Resolution**: Enter the minimum resolution in `WIDTHxHEIGHT` format (e.g., `1920x1080`).
 - **Duration**: Specify a duration range (in seconds).
 - **File Size**: Specify a size range (in MB).
+- **Bitrate** (New!): Specify a bitrate range (in kbps) and choose between Variable or Constant bitrate mode.
 
 ### 4. Combining Filters
 - Use the checkboxes to enable or disable filters:
@@ -66,6 +107,8 @@ A versatile video filtering application built with Python and Tkinter, designed 
   - Resolution
   - Duration
   - File Size
+  - Bitrate
+  - Bitrate Mode
 - You can combine multiple filters for precise results.
 
 ### 5. Running the Filter
@@ -73,9 +116,15 @@ A versatile video filtering application built with Python and Tkinter, designed 
 - The progress bar will show the status as videos are processed.
 
 ### 6. Viewing Results
-- Filtered results are saved to `output.txt` in the same directory as the script.
-- A completion message will indicate how many videos matched the criteria.
+- After filtering is complete:
+  - Open the results in a sortable table.
+  - Interact with each file:
+    - Open the video.
+    - Open its containing folder.
+    - Copy or delete the file.
+  - Export the results as a CSV file for further analysis.
 
+---
 
 ## Supported Codecs
 
@@ -121,6 +170,7 @@ A versatile video filtering application built with Python and Tkinter, designed 
 - `wmv1`
 - `wmv2`
 
+---
 
 ## Development
 
@@ -129,7 +179,9 @@ A versatile video filtering application built with Python and Tkinter, designed 
 - `os`: File and directory operations.
 - `tkinter`: GUI framework.
 - `zipfile` & `urllib`: For downloading and extracting FFmpeg.
+- `csv`: For exporting results as a CSV file.
 
+---
 
 ## Screenshots
 
@@ -137,12 +189,14 @@ A versatile video filtering application built with Python and Tkinter, designed 
 
 ![Screenshot_2](https://github.com/user-attachments/assets/74a88684-598f-493e-bfa7-19be53a8da61)
 
+---
+
 ## Author
 
 **Clément GHANEME**
 
 - [Website](https://clement.business)
-- Initial Release : 26/11/2024
+- Initial Release: 26/11/2024
 
 ## Changelog
 
