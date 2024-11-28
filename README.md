@@ -142,3 +142,48 @@ A versatile video filtering application built with Python and Tkinter, designed 
 
 - [Website](https://clement.business)
 - Initial Release : 26/11/2024
+
+## Changelog
+
+## [1.1.0] - 28/11/2024
+### Added
+- **Bitrate Filtering**:
+  - Added input fields to specify minimum and maximum bitrate (in kbps).
+  - Introduced a filter to distinguish between **variable** and **constant** bitrate modes.
+  - Enhanced the filtering logic to include these new options.
+
+- **Bitrate and Bitrate Mode in Results Table**:
+  - Displayed the **bitrate** (in kbps) and whether it's **variable** or **constant** for each video in the results table.
+
+- **Sortable Columns in Results Table**:
+  - Added functionality to **sort results** by clicking on column headers.
+  - Sorting is **context-aware**:
+    - Alphabetical sorting for text-based columns (e.g., Name, Codec, Bitrate Mode).
+    - Numerical sorting for numeric columns (e.g., Size, Bitrate).
+  - Sorting toggles between ascending and descending order on repeated clicks.
+
+- **Export to CSV**:
+  - Added an "Export to CSV" button in the results window.
+  - Users can export the filtered results into a CSV file containing:
+    - File Name, File Path, File Size, Format, Codec, Bitrate (kbps), and Bitrate Mode.
+  - Includes error handling to ensure smooth export even in edge cases.
+
+- **Tooltips for Main Filters**:
+  - Added **detailed tooltips** for each main filter checkbox to guide users on their functionality:
+    - Codec
+    - Resolution
+    - Duration
+    - File Size
+    - Bitrate
+    - Bitrate Mode
+
+- **Tooltips for Sorting in Results Table**:
+  - Added tooltips to each column header in the results table explaining the sorting functionality.
+  - Example: "Click to sort by Codec".
+
+### Improvements
+- Enhanced the **results display** by adding more relevant information (e.g., Bitrate and Bitrate Mode).
+- Formatted numeric values (e.g., size and bitrate) to two decimal places for improved readability.
+- Optimized the **Treeview layout** in the results table to better fit the additional columns.
+- Updated the **progress bar and status messages** to reflect the current processing state more accurately.
+
