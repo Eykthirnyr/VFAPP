@@ -1,19 +1,20 @@
 # VFAPP
 
-# Video Filter App
+## Video Filter App
 
-A versatile video filtering application built with Python and Tkinter, designed to help users filter video files based on various criteria such as codec, resolution, duration, file size, and bitrate. This tool is perfect for quickly narrowing down video files in a directory according to specific needs.
+A versatile video filtering application built with Python and Tkinter, designed to help users filter video files based on various criteria such as codec, resolution, duration, file size, bitrate, framerate, display aspect ratio, color space, and bit depth. This tool is perfect for quickly narrowing down video files in a directory according to specific needs.
 
 ---
 
 ## Features
 
 ### **Filtering Options**
+
 - **Filter by Codec**:
   - Supports a wide range of codecs, including HAP (HAP, HAP-Q), ProRes, H.264, HEVC, VP9, AV1, and many more.
   
 - **Filter by Resolution**:
-  - Specify a minimum resolution (e.g., 1920x1080) to include only high-resolution videos.
+  - Specify a range for resolution (e.g., 1920x1080 to 3840x2160) to include only high-resolution videos.
 
 - **Filter by Duration**:
   - Define a range for video duration (e.g., 30 to 300 seconds) to filter videos by length.
@@ -21,27 +22,42 @@ A versatile video filtering application built with Python and Tkinter, designed 
 - **Filter by File Size**:
   - Specify a range for file size (in MB) to include only videos within a desired size range.
 
-- **Filter by Bitrate** (New!):
+- **Filter by Bitrate**:
   - Specify a range for average bitrate (in kbps).
   - Filter videos based on bitrate mode (Variable or Constant).
 
+- **Filter by Framerate** (New!):
+  - Specify a range for framerate (e.g., 24 to 60 fps).
+
+- **Filter by Display Aspect Ratio** (New!):
+  - Specify a display aspect ratio (e.g., 16:9).
+
+- **Filter by Color Space** (New!):
+  - Choose from a list of color spaces such as:
+    - sRGB, Adobe RGB, Rec. 709, Rec. 2020, DCI-P3, YUV, and more.
+
+- **Filter by Bit Depth** (New!):
+  - Specify a range for bit depth (e.g., 8 to 16 bits).
+
 - **Multi-Criteria Filtering**:
-  - Combine any or all criteria (codec, resolution, duration, file size, and bitrate) for precise filtering.
+  - Combine any or all criteria for precise filtering.
 
 ---
 
 ### **User Interface Enhancements**
+
 - **User-Friendly Interface**:
   - Intuitive GUI built with Tkinter.
   - Progress bar to track filtering progress.
 
-- **Detailed Tooltips** (New!):
-  - Tooltips on main filters explain their purpose and usage.
+- **Detailed Tooltips**:
+  - Tooltips on filters explain their purpose and usage.
   - Tooltips on results table columns indicate sorting options.
 
 ---
 
 ### **Results Management**
+
 - **View Filtered Results**:
   - Display filtered results in a sortable table directly within the app.
   - Columns include:
@@ -51,11 +67,15 @@ A versatile video filtering application built with Python and Tkinter, designed 
     - Codec
     - Bitrate (in kbps)
     - Bitrate Mode (Variable or Constant)
+    - Framerate
+    - Display Aspect Ratio
+    - Color Space
+    - Bit Depth
 
-- **Sortable Columns** (New!):
+- **Sortable Columns**:
   - Click any column header to sort results:
     - Alphabetical sorting for text-based columns (e.g., Name, Codec, Bitrate Mode).
-    - Numerical sorting for numeric columns (e.g., Size, Bitrate).
+    - Numerical sorting for numeric columns (e.g., Size, Bitrate, Framerate).
   - Sorting toggles between ascending and descending order.
 
 - **File Management Options**:
@@ -63,7 +83,7 @@ A versatile video filtering application built with Python and Tkinter, designed 
   - Copy video files to a new location.
   - Delete files (with confirmation prompt).
 
-- **Export to CSV** (New!):
+- **Export to CSV**:
   - Export filtered results as a CSV file, including all displayed columns for easy data analysis.
 
 ---
@@ -71,10 +91,12 @@ A versatile video filtering application built with Python and Tkinter, designed 
 ## Installation
 
 ### Prerequisites
+
 - Python 3.7 or later
 - Required Python libraries:
   - `tkinter` (usually bundled with Python)
-  - `ttk`
+  - `subprocess`
+  - `os`
   - `shutil`
   - `urllib`
   - `zipfile`
@@ -96,10 +118,14 @@ A versatile video filtering application built with Python and Tkinter, designed 
 
 ### 3. Setting Filters
 - **Codec**: Select the desired codec from the dropdown menu (e.g., `hap`, `prores`, `h264`).
-- **Resolution**: Enter the minimum resolution in `WIDTHxHEIGHT` format (e.g., `1920x1080`).
+- **Resolution**: Enter the resolution range in `WIDTHxHEIGHT` format (e.g., `1920x1080` to `3840x2160`).
 - **Duration**: Specify a duration range (in seconds).
 - **File Size**: Specify a size range (in MB).
-- **Bitrate** (New!): Specify a bitrate range (in kbps) and choose between Variable or Constant bitrate mode.
+- **Bitrate**: Specify a bitrate range (in kbps) and choose between Variable or Constant bitrate mode.
+- **Framerate**: Enter the framerate range (in fps).
+- **Display Aspect Ratio**: Enter the aspect ratio (e.g., `16:9`).
+- **Color Space**: Select a color space from the dropdown menu.
+- **Bit Depth**: Specify a range for bit depth.
 
 ### 4. Combining Filters
 - Use the checkboxes to enable or disable filters:
@@ -109,7 +135,11 @@ A versatile video filtering application built with Python and Tkinter, designed 
   - File Size
   - Bitrate
   - Bitrate Mode
-- You can combine multiple filters for precise results.
+  - Framerate
+  - Display Aspect Ratio
+  - Color Space
+  - Bit Depth
+- Combine multiple filters for precise results.
 
 ### 5. Running the Filter
 - Click "Run" to start the filtering process.
@@ -175,6 +205,7 @@ A versatile video filtering application built with Python and Tkinter, designed 
 ## Development
 
 ### Key Libraries
+
 - `subprocess`: For executing FFmpeg commands.
 - `os`: File and directory operations.
 - `tkinter`: GUI framework.
@@ -185,9 +216,9 @@ A versatile video filtering application built with Python and Tkinter, designed 
 
 ## Screenshots
 
-![Screenshot_1](https://github.com/user-attachments/assets/5fd195c2-12fd-4eba-b597-44f5bec7a670)
+![Screenshot_3](https://github.com/user-attachments/assets/72db33cc-516e-470e-89be-ef4312e3e144)
 
-![Screenshot_2](https://github.com/user-attachments/assets/74a88684-598f-493e-bfa7-19be53a8da61)
+![Screenshot_4](https://github.com/user-attachments/assets/c4d71af0-7003-44bb-9747-2905fbfaccb4)
 
 ---
 
