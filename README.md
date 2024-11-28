@@ -200,6 +200,61 @@ A versatile video filtering application built with Python and Tkinter, designed 
 
 ## Changelog
 
+### [1.2.0] - 28/11/2024
+
+#### Added
+
+**Framerate Filtering:**
+
+- Added input fields to specify minimum and maximum framerate (in fps).
+- Enhanced the filtering logic to include these new options.
+- Framerate information is displayed in the results table.
+
+**Display Aspect Ratio Filtering:**
+
+- Added input field for specifying display aspect ratio (e.g., 16:9).
+- Aspect ratio is automatically calculated if not explicitly provided by the video metadata.
+
+**Color Space Filtering:**
+
+- Added a dropdown list to filter videos by color space. Supported color spaces include:
+  - sRGB, Adobe RGB, ProPhoto RGB, Rec. 709, Rec. 2020, DCI-P3, Apple RGB, CMYK, YUV, and more.
+- Color space information is displayed in the results table.
+
+**Bit Depth Filtering:**
+
+- Added input fields to specify minimum and maximum bit depth.
+- Bit depth is inferred from video pixel format if not explicitly provided in metadata.
+- Bit depth information is displayed in the results table.
+
+**Enhanced Results Table:**
+
+- New columns added for:
+  - Framerate
+  - Display Aspect Ratio (DAR)
+  - Color Space
+  - Bit Depth
+- Existing columns such as Name, Size, Codec, Bitrate, and Bitrate Mode remain sortable.
+
+#### Improvements
+
+- Default window size set to 700x860 for better usability.
+- Aligned input fields in the GUI to improve readability and symmetry.
+- Enhanced progress bar and status messages to better reflect the current processing state.
+- Added tooltips for all new filters and table columns, providing clearer descriptions.
+
+#### Fixed
+
+- Corrected issues with color space retrieval. Color space is now inferred and displayed as expected (e.g., YUV, RGB).
+- Aspect ratio is calculated dynamically when not explicitly provided, ensuring accurate filtering and display.
+
+#### Export Enhancements
+
+- CSV export now includes all newly added parameters (Framerate, DAR, Color Space, and Bit Depth).
+- Error handling improved to ensure smooth export even when certain metadata is missing.
+
+---
+
 ### [1.1.0] - 28/11/2024
 ### Added
 - **Bitrate Filtering**:
