@@ -110,7 +110,7 @@ A versatile video filtering application built with Python and Tkinter, designed 
 ### 1. Launching the Application
 - Run the script using Python:
   ```bash
-  python video_filter_app.py
+  python VFAPP.py
   ```
 
 ### 2. Selecting a Folder
