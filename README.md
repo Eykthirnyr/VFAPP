@@ -133,8 +133,9 @@ A versatile video filtering application built with Python and Tkinter, designed 
 
 ## Screenshots
 
-![VFAPP](https://github.com/user-attachments/assets/f2a55cfd-e703-41ea-aadd-fbc4c5024ef4)
+![Screenshot_1](https://github.com/user-attachments/assets/5fd195c2-12fd-4eba-b597-44f5bec7a670)
 
+![Screenshot_2](https://github.com/user-attachments/assets/74a88684-598f-493e-bfa7-19be53a8da61)
 
 ## Author
 
@@ -145,7 +146,7 @@ A versatile video filtering application built with Python and Tkinter, designed 
 
 ## Changelog
 
-## [1.1.0] - 28/11/2024
+### [1.1.0] - 28/11/2024
 ### Added
 - **Bitrate Filtering**:
   - Added input fields to specify minimum and maximum bitrate (in kbps).
